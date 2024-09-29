@@ -9,8 +9,8 @@ Example usage:
     python3 create_users.py testemail -n 3 --dry-run
     This will simulate creating 3 users without actually making any changes
 
-    python3 create_users.py austinmw89 -n 5
-    This will create 5 users with email addresses like austinmw89+user0001@gmail.com
+    python3 create_users.py youremail -n 5
+    This will create 5 users with email addresses like youremail+user0001@gmail.com
 
     python3 create_users.py youremail -n 5 --creds-file custom_creds.txt
     This will create 5 users and save the credentials to custom_creds.txt
@@ -201,7 +201,7 @@ def main(email_prefix: str, num_users: int, dry_run: bool, creds_file: str):
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description="Create Mastodon user accounts")
     parser.add_argument(
-        "email_prefix", type=str, help="Email prefix for user accounts (e.g., austinmw89)"
+        "email_prefix", type=str, help="Email prefix for user accounts (e.g., youremail)"
     )
     parser.add_argument(
         "-n", "--num-users", type=int, default=5, help="Number of users to create (default: 5)"

@@ -153,8 +153,8 @@ Ensure the following are installed and configured on your system:
 While on the web server, create a new user and grant admin privileges.
 
 ```bash
-export ADMIN_USERNAME=austinmw
-export EMAIL_ADDRESS=austinmw89@gmail.com
+export ADMIN_USERNAME=yourusername
+export EMAIL_ADDRESS=youremail@gmail.com
 
 # Create a new user and generate a password (write down the password)
 RAILS_ENV=production bin/tootctl accounts create $ADMIN_USERNAME --email $EMAIL_ADDRESS --confirmed --role Owner
@@ -219,7 +219,7 @@ This should output the following:
 2024-07-06T07:41:45.792379-0400 INFO Created new Mastodon app
 2024-07-06T07:41:45.793279-0400 INFO Created new .env file at /Users/austinwelch/Desktop/mastodon-sim/.env
 2024-07-06T07:41:45.793401-0400 INFO Added API_BASE_URL=https://social-sandbox.com
-2024-07-06T07:41:45.793498-0400 INFO Added EMAIL_PREFIX=austinmw89
+2024-07-06T07:41:45.793498-0400 INFO Added EMAIL_PREFIX=youremail
 2024-07-06T07:41:45.793774-0400 INFO Adding new MASTODON_CLIENT_ID
 2024-07-06T07:41:45.793870-0400 INFO Adding new MASTODON_CLIENT_SECRET
 2024-07-06T07:41:45.794207-0400 INFO Updated .env file at /Users/austinwelch/Desktop/mastodon-sim/.env
@@ -244,7 +244,7 @@ This should output the following:
 5. Run the creation script
 
     ```bash
-    python3 create_users.py austinmw89 -n 5
+    python3 create_users.py youremail -n 5
     ```
 
 ## Costs for Running Mastodon on AWS

@@ -48,7 +48,7 @@ After reading the example end-to-end with the current outputs, clear the noteboo
 
    [https://github.com/social-sandbox/mastodon-sim?tab=readme-ov-file#development-installation](https://github.com/social-sandbox/mastodon-sim?tab=readme-ov-file#development-installation)
 
-2. Next, create a file named `.env` in the root directory of the repo, and add this to its contents:
+2. Next, create a file named `.env` in the root directory of the repo, and add this to its contents (filling in the required information):
 
    ```txt
    # Mastodon API base URL
@@ -58,30 +58,29 @@ After reading the example end-to-end with the current outputs, clear the noteboo
    # Each user needs a unique email address, so to get around this,
    # we can use email subaddressing with this convention:
    # <email_prefix>+user<user_number>@gmail.com
-   EMAIL_PREFIX=austinmw89
+   EMAIL_PREFIX=<email_prefix>
 
    # Mastodon client credentials
-   MASTODON_CLIENT_ID=NdIWDUSwPJv1CA3GsJHps3lvOJ2uqChOcxnq0UI8yiE
-   MASTODON_CLIENT_SECRET=b6eOuHMGkGZ76gkC52vocYIiswmTFRi0Cws9sCkAXts
+   MASTODON_CLIENT_ID=<client ID>
+   MASTODON_CLIENT_SECRET=<client secret>
 
    # User passwords
    # Currently 5 users created, named user0001 - user0005
-   USER0001_PASSWORD=9f5fcfd16622a42a2459c297f658a7d5
-   USER0002_PASSWORD=8f3b42785c278ac4bdf77a868bb3fa9b
-   USER0003_PASSWORD=f3d78fba9fd15370013736b234bcd556
-   USER0004_PASSWORD=7ac663bfc0b490569b220413f861b0ee
-   USER0005_PASSWORD=a1ceaf2ded49473fe0d7fd000d389c8a
+   USER0001_PASSWORD=<password>
+   USER0002_PASSWORD=<password>
+   USER0003_PASSWORD=<password>
+   USER0004_PASSWORD=<password>
+   USER0005_PASSWORD=<password>
    ```
 
-3. **Important: Note in the `mastodon-coordination` Slack channel when starting and finishing running it to coordinate and prevent overlap**
-4. After installation, run the `Mastodon.ipynb` notebook, selecting the `.venv` as the kernel:
-5. The passwords in the `.env` file can be used to directly log in to the Mastodon server as any user at the domain [https://social-sandbox.com/](https://social-sandbox.com/). For example, for user0001, the credentials will be:
+3. After installation, run the `Mastodon.ipynb` notebook, selecting the `.venv` as the kernel:
+4. The passwords in the `.env` file can be used to directly log in to the Mastodon server as any user at the domain [https://social-sandbox.com/](https://social-sandbox.com/). For example, for user0001, the credentials will be:
 
    ```txt
-   E-mail address: austinmw89+user0001@gmail.com
-   Password: 9f5fcfd16622a42a2459c297f658a7d5
+   E-mail address: <email_prefix>+user0001@gmail.com
+   Password: <password>
    ```
 
-### 6. Run the `Concordia+Mastodon.ipynb` example again, this time with `USE_MASTODON_SERVER = True`
+### 5. Run the `Concordia+Mastodon.ipynb` example again, this time with `USE_MASTODON_SERVER = True`
 
 With this setting turned on, when an agent invokes a Mastodon app action, that action will actually use the Mastodon API to execute on the Mastodon instance.
