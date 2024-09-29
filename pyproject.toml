@@ -6,7 +6,7 @@ build-backend = "poetry.core.masonry.api"
 name = "mastodon-sim"
 version = "0.0.0"
 description = "Generative Agent simulation of a Mastodon social network"
-authors = ["Austin Welch <austinmw89@gmail.com>"]
+authors = ["Anonymized <anonymized@gmail.com>"]
 readme = "README.md"
 repository = "https://github.com/social-sandbox/mastodon-sim"
 
